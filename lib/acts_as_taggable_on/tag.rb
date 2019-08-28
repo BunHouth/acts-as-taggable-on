@@ -2,7 +2,7 @@
 module ActsAsTaggableOn
   class Tag < ::ActiveRecord::Base
     extend Mobility
-    translates :name, type: :string, fallbacks: { jp: :en }
+    translates :name, type: :string, fallbacks: { en: :ja }
 
     self.table_name = ActsAsTaggableOn.tags_table
 
