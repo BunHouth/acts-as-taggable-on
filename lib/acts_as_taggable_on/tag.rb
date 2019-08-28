@@ -1,6 +1,9 @@
 # encoding: utf-8
 module ActsAsTaggableOn
   class Tag < ::ActiveRecord::Base
+    extend Mobility
+    translates :name, type: :string, fallbacks: { jp: :en }
+
     self.table_name = ActsAsTaggableOn.tags_table
 
     ### ASSOCIATIONS:
